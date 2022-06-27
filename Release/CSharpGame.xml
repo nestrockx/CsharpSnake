@@ -1,0 +1,207 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CSharpGame</name>
+    </assembly>
+    <members>
+        <member name="T:CSharpGame.Snake.Direction">
+            <summary>
+            Direction enum
+            </summary>
+        </member>
+        <member name="M:CSharpGame.Snake.GameOver(System.Int32)">
+            <summary>
+            invoked when game ends
+            </summary>
+            <param name="points">points gathered</param>
+        </member>
+        <member name="M:CSharpGame.Snake.YouWon(System.Int32)">
+            <summary>
+            invoked when hash sign collision detected
+            </summary>
+            <param name="points">points gathered</param>
+        </member>
+        <member name="M:CSharpGame.Snake.Rank(System.Int32)">
+            <summary>
+            ranks user score
+            </summary>
+            <param name="points">points gathered</param>
+        </member>
+        <member name="M:CSharpGame.Snake.DisplayRank(System.Int32)">
+            <summary>
+            displays rank
+            </summary>
+            <param name="n">number of rows to show</param>
+        </member>
+        <member name="M:CSharpGame.Snake.Enter">
+            <summary>
+            waits for enter key input and clear the screen
+            </summary>
+        </member>
+        <member name="M:CSharpGame.Snake.GameStart">
+            <summary>
+            game init and start
+            </summary>
+        </member>
+        <member name="M:CSharpGame.Snake.#ctor">
+            <summary>
+            snake class constructor handling play again
+            </summary>
+        </member>
+        <member name="T:CSharpGame.FileMG">
+            <summary>
+            file management class
+            </summary>
+        </member>
+        <member name="F:CSharpGame.FileMG._fileName">
+            <summary>
+            file name property
+            </summary>
+        </member>
+        <member name="M:CSharpGame.FileMG.#ctor(System.String)">
+            <summary>
+            create file if doesn't exist
+            </summary>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:CSharpGame.FileMG.Write(System.String)">
+            <summary>
+            write to file
+            </summary>
+            <param name="str">string</param>
+        </member>
+        <member name="M:CSharpGame.FileMG.Write(System.String[])">
+            <summary>
+            write to file
+            </summary>
+            <param name="str">array of strings</param>
+        </member>
+        <member name="M:CSharpGame.FileMG.Append(System.String)">
+            <summary>
+            append to file
+            </summary>
+            <param name="str">string to append</param>
+        </member>
+        <member name="M:CSharpGame.FileMG.Display">
+            <summary>
+            display content od the file
+            </summary>
+        </member>
+        <member name="T:CSharpGame.MainClass">
+            <summary>
+            main class
+            </summary>
+        </member>
+        <member name="T:CSharpGame.Point">
+            <summary>
+            point struct
+            </summary>
+        </member>
+        <member name="M:CSharpGame.Point.op_Equality(CSharpGame.Point,CSharpGame.Point)">
+            <summary>
+            equality operator override
+            </summary>
+            <param name="p1">point 1</param>
+            <param name="p2">point 2</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:CSharpGame.Point.op_Inequality(CSharpGame.Point,CSharpGame.Point)">
+            <summary>
+            inequality operator override
+            </summary>
+            <param name="p1">point 1</param>
+            <param name="p2">point 2</param>
+            <returns>bool</returns>
+        </member>
+        <member name="F:CSharpGame.Point.X">
+            <summary>
+            first coordinate property
+            </summary>
+        </member>
+        <member name="F:CSharpGame.Point.Y">
+            <summary>
+            second coordinate property
+            </summary>
+        </member>
+        <member name="M:CSharpGame.Point.#ctor(System.Int32,System.Int32)">
+            <summary>
+            struct constructor
+            </summary>
+            <param name="X">first coordinate</param>
+            <param name="Y">second coordinate</param>
+        </member>
+        <member name="M:CSharpGame.Point.Right">
+            <summary>
+            translate to right
+            </summary>
+        </member>
+        <member name="M:CSharpGame.Point.Left">
+            <summary>
+            translate to left
+            </summary>
+        </member>
+        <member name="M:CSharpGame.Point.Up">
+            <summary>
+            translate up
+            </summary>
+        </member>
+        <member name="M:CSharpGame.Point.Down">
+            <summary>
+            translate down
+            </summary>
+        </member>
+        <member name="M:CSharpGame.Point.Equals(System.Object)">
+            <summary>
+            equals method override
+            </summary>
+            <param name="obj"></param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:CSharpGame.Point.GetHashCode">
+            <summary>
+            
+            </summary>
+            <returns>hascode</returns>
+        </member>
+        <member name="T:CSharpGame.Result">
+            <summary>
+            class for storing data from file
+            </summary>
+        </member>
+        <member name="T:CSharpGame.RankFileMG">
+            <summary>
+            rank file manager inheriting from file managment class
+            </summary>
+        </member>
+        <member name="F:CSharpGame.RankFileMG._fileName">
+            <summary>
+            file name property
+            </summary>
+        </member>
+        <member name="M:CSharpGame.RankFileMG.#ctor(System.String)">
+            <summary>
+            contructor with inherited parameter
+            </summary>
+            <param name="fileName">file name</param>
+        </member>
+        <member name="M:CSharpGame.RankFileMG.SortRank">
+            <summary>
+            sort rank
+            </summary>
+        </member>
+        <member name="M:CSharpGame.RankFileMG.DisplayRank(System.Int32)">
+            <summary>
+            display rank
+            </summary>
+            <param name="n"></param>
+        </member>
+        <member name="M:CSharpGame.RankFileMG.IsScoreRankable(System.Int32,System.Int32)">
+            <summary>
+            is score eligible to be ranked
+            </summary>
+            <param name="n">amount of rankables</param>
+            <param name="points">points gathered</param>
+            <returns>bool</returns>
+        </member>
+    </members>
+</doc>
